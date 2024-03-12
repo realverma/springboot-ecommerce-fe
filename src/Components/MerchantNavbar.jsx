@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "../Styles/MerchantNavbar.css";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const MerchantNavbar = () => {
   return (
@@ -64,7 +65,7 @@ const MerchantNavbar = () => {
           </div>
         </li>
       </ul>
-      <div>
+      <div style={{display:'flex', alignItems:'center',justifyContent:'center', gap:'5px'}}>
       <Dropdown>
           <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
           <AccountCircleIcon></AccountCircleIcon> My Account
@@ -76,6 +77,10 @@ const MerchantNavbar = () => {
             <Dropdown.Item href="/">Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+      
+      <div>
+      <Link to={"/merchanthome/cart"}><ShoppingCartIcon></ShoppingCartIcon></Link>
+      </div>
       </div>
     </nav>
     </div>
