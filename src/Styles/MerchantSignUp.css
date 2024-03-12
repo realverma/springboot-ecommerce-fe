@@ -1,0 +1,21 @@
+.merchant-login{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid gray;
+    margin-top: 20px;
+}
+
+.merchantsignup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.merchantsignup form{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid gray;
+}
