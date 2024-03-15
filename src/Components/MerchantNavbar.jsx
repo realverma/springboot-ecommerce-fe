@@ -4,6 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "../Styles/MerchantNavbar.css";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import logo from '../assets/logo.png'
 
 const MerchantNavbar = () => {
   return (
@@ -12,7 +13,7 @@ const MerchantNavbar = () => {
       {/* menu   */}
       <nav class="navbar">
       <a href="#" class="navbar-logo"
-        > sHOP ROAD</a>
+        ><img src={logo} alt="" style={{width:'186px'}}/></a>
       <ul class="navbar-links">
         <li class="navbar-dropdown">
           <Link to={"/merchanthome/productview"}>All Products</Link>
@@ -72,8 +73,8 @@ const MerchantNavbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">MyAccount</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Add Product</Dropdown.Item>
+            <Dropdown.Item href="/merchanthome/editmerchant">Edit Account</Dropdown.Item>
+            <Dropdown.Item href="/merchanthome/addproduct">Add Product</Dropdown.Item>
             <Dropdown.Item href="/">Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

@@ -9,6 +9,7 @@ import MerchantHome from './Components/MerchantHome';
 import UserSignUp from './Components/UserSignUp';
 import Userhome from './Components/Userhome';
 import Error from './Components/Error';
+import Protect from './Components/Protect';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path='/user' element={<User/>}/>
         <Route path='/merchantsignup' element={<MerchantSignup/>}/>
         <Route path='/usersignup' element={<UserSignUp/>}/>
-        <Route path='/merchanthome/*' element={<MerchantHome/>}/>
+        <Route path='/merchanthome/*' element={<Protect Child={MerchantHome}/>}/>
         <Route path='/userhome' element={<Userhome/>}/>
       </Routes>
       </BrowserRouter>

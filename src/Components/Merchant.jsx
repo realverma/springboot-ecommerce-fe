@@ -1,31 +1,26 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import '../Styles/MerchantSignup.css'
 
 const Merchant = () => {
   const [phone, setphone] = useState("")
   const [password, setpassword] = useState("")
-  console.log(phone);
+  let navigate=useNavigate()
 
   function verifyMerchant(e){
     e.preventDefault()
-
-    // if(email=="abc@abc.com" && password=="1234"){
-    //   alert("login sucess")
-    // }
-    // else{
-    //   alert("Invalid pass")
-    // }
     axios.post(`http://localhost:8080/merchants/verify-by-phone?phone=${phone}&password=${password}`)
     .then(res=>{
-      console.log(res)
-      alert("login sucessfull")
+      // console.log(res)
+      localStorage.setItem("merchant",JSON.stringify(res.data.data))
+      alert("logged in successfully")
+      navigate('/merchanthome')
     })
     .catch(err=>{
-      console.log(err);
-      alert("Invalid credentials")
+      console.log("Wrr",err);
+      alert("Invalid username or password")
     })
   }
   return (
