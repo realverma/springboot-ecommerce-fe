@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import SingleProduct from './SingleProduct'
 
 const ProductView = () => {
 
@@ -37,6 +38,8 @@ const [products, setProducts] = useState("")
         })
       }
       </div>
+
+      <SingleProduct/>
     </div>
   )
 }

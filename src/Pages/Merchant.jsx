@@ -13,7 +13,6 @@ const Merchant = () => {
     e.preventDefault()
     axios.post(`http://localhost:8080/merchants/verify-by-phone?phone=${phone}&password=${password}`)
     .then(res=>{
-      // console.log(res)
       localStorage.setItem("merchant",JSON.stringify(res.data.data))
       alert("logged in successfully")
       navigate('/merchanthome')

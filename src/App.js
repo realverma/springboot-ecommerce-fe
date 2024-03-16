@@ -1,15 +1,15 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import LandingPage from './Components/LandingPage';
-import Merchant from './Components/Merchant';
-import User from './Components/User';
+import LandingPage from './Pages/LandingPage';
+import Merchant from './Pages/Merchant';
+import User from './Pages/User';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MerchantSignup from './Components/MerchantSignup';
-import MerchantHome from './Components/MerchantHome';
-import UserSignUp from './Components/UserSignUp';
-import Userhome from './Components/Userhome';
-import Error from './Components/Error';
-import Protect from './Components/Protect';
+import MerchantSignup from './Pages/MerchantSignup';
+import MerchantHome from './Pages/MerchantHome';
+import UserSignUp from './Pages/UserSignUp';
+import Userhome from './Pages/Userhome';
+import Error from './Pages/Error';
+import Protect from './Pages/Protect';
 
 function App() {
   return (

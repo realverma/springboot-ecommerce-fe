@@ -9,15 +9,14 @@ import UpdateMerchant from './UpdateMerchant'
 
 const MerchantHome = () => {
 
-  let mymerchant=localStorage.getItem("merchant")
-  let id=JSON.parse(mymerchant).id
+
   return (
     <div>
       <MerchantNavbar/>
       <Routes>
         <Route path="/productview" element={<ProductView />} />
         <Route path="/editmerchant" element={<UpdateMerchant />} />
-        <Route path="/addproduct" element={<AddProduct id={id} />} />
+        <Route path="/addproduct" element={<AddProduct/>} />
       </Routes>
     </div>
   )

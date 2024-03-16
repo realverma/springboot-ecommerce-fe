@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-const AddProduct = ({id}) => {
+const AddProduct = () => {
 
     const [name, setName] = useState("")
     const [brand, setBrand] = useState("")
@@ -12,6 +12,8 @@ const AddProduct = ({id}) => {
 
 
     let data={name,brand,category,description,image_url,cost}
+    let mymerchant=localStorage.getItem("merchant")
+    let id=JSON.parse(mymerchant).id
 
     function addProduct(e){
         e.preventDefault()

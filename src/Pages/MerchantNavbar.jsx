@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "../Styles/MerchantNavbar.css";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from '../assets/logo.png'
 
 const MerchantNavbar = () => {
@@ -75,13 +74,9 @@ const MerchantNavbar = () => {
           <Dropdown.Menu>
             <Dropdown.Item href="/merchanthome/editmerchant">Edit Account</Dropdown.Item>
             <Dropdown.Item href="/merchanthome/addproduct">Add Product</Dropdown.Item>
-            <Dropdown.Item href="/">Logout</Dropdown.Item>
+            <Dropdown.Item href="/" onClick={localStorage.clear()}>Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-      
-      <div>
-      <Link to={"/merchanthome/cart"}><ShoppingCartIcon></ShoppingCartIcon></Link>
-      </div>
       </div>
     </nav>
     </div>
