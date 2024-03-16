@@ -69,3 +69,12 @@
     }
   }
 }
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bgmain);
+  padding: 20px;
+}

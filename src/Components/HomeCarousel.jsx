@@ -23,12 +23,14 @@ function HomeCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
        {data.map((slide, i) => {
         return (
-          <Carousel.Item interval={1000}>        
+          <Carousel.Item interval={1000}>
+            <a href="#">       
         <img
           className="d-block w-100"
           src={slide.image}
           alt="slider image"
         />
+        </a> 
         <Carousel.Caption>
           <h3>{slide.caption}</h3>
           <p>{slide.description}</p>
