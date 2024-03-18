@@ -2,10 +2,19 @@
 .item-container {
     background-color: #fff;
     width: 20rem;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1rem 0;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .item-top {
@@ -71,9 +80,8 @@
     border: 1px;
     font-weight: bold;
     padding: .5rem 1rem;
-    background-color: rgb(200, 142, 254);
+    background-color: black;
     color: #fff;
-    border-radius: 2rem;
     font-size: 1.2rem;
     font-weight: 200;
     position: relative;
@@ -83,5 +91,5 @@
 
 .item-cart-btn:hover {
     color: #fff;
-    background-color: rgb(160, 110, 206);
+    background-color: rgb(68, 68, 68);
 }

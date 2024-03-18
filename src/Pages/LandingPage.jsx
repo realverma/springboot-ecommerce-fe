@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar";
 import CategoryCard from "../Components/CategoryCard";
 import ProductCard from "../Components/ProductCard";
 import Footer from "../Components/Footer";
+import MostViewedProducts from "../Components/MostViewedProducts";
 
 const LandingPage = () => {
 
@@ -19,7 +20,7 @@ const LandingPage = () => {
       <div className="most-popular">
         <h2>Most Popular</h2>
         <div>All our new arrivals in a exclusive brand selection</div>
-      <ProductCard/>
+      <MostViewedProducts/>
       </div>
       </div>
       <Footer/>

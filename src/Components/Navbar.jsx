@@ -8,7 +8,7 @@ import MainMenu from './MainMenu';
 
 const Navbar = () => {
   return (
-    <div className="merchantnav">
+    <div className="merchantnav" style={{backgroundColor:'#f0f2ff'}}>
 
       {/* menu   */}
       <nav class="navbar">
