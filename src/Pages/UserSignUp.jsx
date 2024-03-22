@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 const UserSignUp = () => {
 
     const [name, setname] = useState("")
@@ -49,6 +50,10 @@ const UserSignUp = () => {
         <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
         <button className="btn btn-outline-info">Signup</button>
       </form>
+
+
+
+      
     </div>
   )
 }

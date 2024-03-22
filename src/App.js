@@ -25,7 +25,7 @@ function App() {
         <Route path='/merchanthome/*' element={<Protect Child={MerchantHome}/>}/>
         <Route path='/userhome' element={<Userhome/>}/>
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
     </div>
   );
 }

@@ -1,0 +1,59 @@
+.merchant-dashboard{
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 15rem auto;
+    overflow: hidden;
+}
+
+.merchant-dashboard .dashboard-sidebar{
+    background-color: #ebf5ff;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.merchant-dashboard .dashboard-sidebar .logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.merchant-dashboard .dashboard-sidebar .logo img{
+    width: 100px;
+}
+
+.merchant-dashboard .dashboard-sidebar .menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.merchant-dashboard .dashboard-sidebar .menu a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.merchant-dashboard .dashboard-sidebar .menu a:hover{
+    background-color: #accdfb;
+}
+
+.merchant-dashboard .main-dash{
+    background-color: rgb(230, 253, 245);
+    padding: 20px;
+}
+
+.merchant-dashboard .main-dash .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.merchant-dashboard .main-dash .main-dash-content .main-dash-content-product{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  */
+    grid-template-columns: 50px 300px repeat(auto-fit, minmax(100px, 1fr)); 
+    grid-gap: 20px;
+    background-color: white;
+}
+

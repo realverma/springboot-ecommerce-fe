@@ -32,8 +32,8 @@ const MerchantSignup = () => {
   return (
     <div className="merchantsignup">
       <form action="" onSubmit={signupmerchant}>
-
-
+        <h4>Enter Your Details</h4>
+        <div></div>
         <label htmlFor="">Name</label>
         <input type="text" value={name} onChange={e=>setname(e.target.value)}/>
 

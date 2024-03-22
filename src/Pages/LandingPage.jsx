@@ -4,7 +4,6 @@ import "../Styles/MerchantNavbar.css";
 import HomeCarousel from "../Components/HomeCarousel";
 import Navbar from "../Components/Navbar";
 import CategoryCard from "../Components/CategoryCard";
-import ProductCard from "../Components/ProductCard";
 import Footer from "../Components/Footer";
 import MostViewedProducts from "../Components/MostViewedProducts";
 

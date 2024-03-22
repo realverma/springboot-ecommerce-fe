@@ -41,6 +41,9 @@ const NavExtra = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
+                <Dropdown.Item href="/merchanthome/mdashboard">
+                  Dashboard
+                </Dropdown.Item>
                 <Dropdown.Item href="/merchanthome/editmerchant">
                   Edit Account
                 </Dropdown.Item>

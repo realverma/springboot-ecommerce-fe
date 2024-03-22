@@ -1,18 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "../Styles/MerchantNavbar.css";
 import logo from '../assets/logo.png'
 
 const MerchantNavbar = () => {
+  let navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/')
+  }
   return (
     <div className="merchantnav">
 
       {/* menu   */}
       <nav class="navbar">
-      <a href="#" class="navbar-logo"
-        ><img src={logo} alt="" style={{width:'186px'}}/></a>
+      <Link to={"/"} class="navbar-logo"
+        ><img src={logo} alt="" style={{width:'186px'}}/></Link>
       <ul class="navbar-links">
         <li class="navbar-dropdown">
           <Link to={"/merchanthome/productview"}>All Products</Link>
@@ -72,9 +78,10 @@ const MerchantNavbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
+            <Dropdown.Item href="/merchanthome/dashboard">Dashboard</Dropdown.Item>
             <Dropdown.Item href="/merchanthome/editmerchant">Edit Account</Dropdown.Item>
             <Dropdown.Item href="/merchanthome/addproduct">Add Product</Dropdown.Item>
-            <Dropdown.Item href="/" onClick={localStorage.clear()}>Logout</Dropdown.Item>
+            <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>

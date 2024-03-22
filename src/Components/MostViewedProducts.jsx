@@ -20,9 +20,9 @@ const MostViewedProducts = () => {
   return(
     <div style={{display:'flex', gap:'30px', padding:'50px',flexWrap:'wrap', justifyContent:'center'}}>
     {
-      products && products.length > 0 && products.map((product)=>{
+      products && products.length > 0 && products.slice(0, 8).map((product)=>{
         return(
-          <ProductCard key={product.id} name={product.name} cost={product.cost} {...product}/>
+          <ProductCard key={product.id} {...product}/>
         )
       })
     }

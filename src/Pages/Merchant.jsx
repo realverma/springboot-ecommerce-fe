@@ -16,6 +16,7 @@ const Merchant = () => {
       localStorage.setItem("merchant",JSON.stringify(res.data.data))
       alert("logged in successfully")
       navigate('/merchanthome')
+      console.log(res.data.data);
     })
     .catch(err=>{
       console.log("Wrr",err);
@@ -23,11 +24,11 @@ const Merchant = () => {
     })
   }
   return (
-    <div>
+    <div style={{display:'flex', justifyContent:'center'}}>
       <Form className='merchant-login'>
-        <h3>Merchant</h3>
+        <h2>Welcome, Merchant</h2>
       <Form.Group className="mb-3" controlId="formGroupEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label>Email Phone</Form.Label>
         <Form.Control type="tel" value={phone} onChange={e=>setphone(e.target.value)} placeholder="Enter phone" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formGroupPassword">
@@ -36,7 +37,7 @@ const Merchant = () => {
       </Form.Group>
       <Form.Group>
         <button className='btn btn-success mx-5' onClick={verifyMerchant}>Sign In</button>
-        <button className='btn btn-danger mx-5'><Link to={'/merchantsignup'}>Sign Up</Link></button>
+        <button className='btn btn-danger mx-5'><Link to={'/merchantsignup'} style={{color:'white', textDecoration:'none'}}>Sign Up</Link></button>
       </Form.Group>
     </Form>
     </div>
